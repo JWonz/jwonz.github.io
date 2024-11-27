@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>crispydata</title>
     <script>
-        if (window.location.href==="https://jwonz.github.io") {
-            window.location.href = "http://108.82.232.38:8088"; 
+        console.log("Current URL:", window.location.href);
+        if (window.location.href.includes("https://jwonz.github.io")) {
+            console.log("Redirecting...");
+            window.location.href = "http://108.82.232.38:8088";
+        } else {
+            console.log("No redirect, URL does not match.");
+        }
+        function redirectToSuperset() {
+            window.location.href = "http://108.82.232.38:8088";
         }
     </script>
 </head>
 <body>
-    <!-- Your body content goes here -->
+    <button onclick="redirectToSuperset()">Go to Superset</button>
 </body>
 </html>
